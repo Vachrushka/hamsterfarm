@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zqnbu@^v)$x-gp^+g%=z+dury0+5cr^zjy*1)h8qhh-nnk31*j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hamsterfarm.pythonanywhere.com']
 
 
 # Application definition
