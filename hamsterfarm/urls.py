@@ -5,6 +5,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 router = routers.DefaultRouter()
 router.register('tg-enter', GetScriptViewSet, basename='tg-enter')
+router.register('tg-enter-filtered', GetScriptWindViewSet, basename='tg-enter-filtered')
 
 urlpatterns = [
     path('', include(router.urls)),

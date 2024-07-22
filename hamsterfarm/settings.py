@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zqnbu@^v)$x-gp^+g%=z+dury0+5cr^zjy*1)h8qhh-nnk31*j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hamsterfarm.pythonanywhere.com']
+ALLOWED_HOSTS = ['hamsterfarm.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'corsheaders',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
+    "https://hamsterkombatgame.io",
     # добавьте сюда другие разрешенные источники
 ]
 ROOT_URLCONF = 'hamsterfarm.urls'
@@ -109,6 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
